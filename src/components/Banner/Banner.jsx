@@ -4,6 +4,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "./Banner.css";
+
 import { FaArrowRightLong } from "react-icons/fa6";
 const Banner = () => {
   return (
@@ -23,7 +24,7 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="w-full min-h-[400px] md:min-h-[680px] flex justify-around items-center bg-[#83F0F2] rounded">
+          <div className="w-full min-h-[300px] md:min-h-[680px] flex justify-around items-center bg-[#83F0F2] rounded">
             <div className="flex-1">
               <h2 className="md:text-5xl text-3xl font-bold mb-3">
                 Enjoy This Summer Trends
@@ -41,11 +42,20 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full min-h-[400px] md:min-h-[680px]  flex justify-around items-center bg-blue-300 rounded">
+          <div
+            className="w-full min-h-[300px] md:min-h-[680px]  flex justify-around items-center bg-blue-300 rounded
+          "
+          >
             <div className="flex-1">
               <img src="/slider2.png" alt="" />
             </div>
-            <div className="flex-1">
+            <div
+              className="flex-1"
+              data-aos="zoom-in-down"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="2000"
+            >
               <h2 className="text-3xl md:text-5xl font-bold mb-3">
                 Enjoy This Summer Trends
               </h2>
@@ -59,7 +69,13 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full min-h-[400px] md:min-h-[680px]  flex justify-around items-center bg-[#E6E6E6] rounded">
+          <div
+            className="w-full min-h-[300px] md:min-h-[680px]  flex justify-around items-center bg-[#E6E6E6] rounded"
+            data-aos="zoom-in-down"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="2000"
+          >
             <div className="flex-1">
               <h2 className="text-3xl md:text-5xl font-bold mb-3">
                 Enjoy This Summer Trends

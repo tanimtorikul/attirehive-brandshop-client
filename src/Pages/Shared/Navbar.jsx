@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaUser, FaToggleOff, FaMagnifyingGlass } from "react-icons/fa6";
 
 const Navbar = () => {
@@ -88,9 +88,9 @@ const Navbar = () => {
         <a href="text-xl">
           <FaMagnifyingGlass></FaMagnifyingGlass>
         </a>
-        <a className="text-xl">
+        <Link to='/login' className="text-xl">
           <FaUser></FaUser>
-        </a>
+        </Link>
         <a className="text-xl" href="">
           <FaToggleOff></FaToggleOff>
         </a>

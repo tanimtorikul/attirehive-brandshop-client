@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
       <footer className="footer bg-base-100  py-8 ">
-        <div className="container mx-auto flex flex-wrap justify-between">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between">
           <div className="footer-section">
             <h2 className="text-2xl font-semibold mb-4">Social</h2>
             <ul className="list-none">
@@ -99,7 +99,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div className="container mx-auto flex justify-between  items-center">
+      <div className="container mx-auto flex flex-col md:flex-row md:justify-between  items-center">
         <div className="mb-4">&copy; 2023 AttireVibe</div>
         <div className="flex">
           <img src="visa.svg" alt="Visa" className="mr-2" />

@@ -104,7 +104,7 @@ const AddProduct = () => {
                 required
               />
             </div>
-            <div className="form-control w-1/2 mx-auto mt-6">
+            <div className="form-control md:w-1/6 mx-auto mt-6">
               <button className="btn bg-[#11C0B4] hover:bg-green-600 text-white">
                 Add Product
               </button>

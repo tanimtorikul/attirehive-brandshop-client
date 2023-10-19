@@ -1,0 +1,26 @@
+[
+    {
+      "name": "Nike",
+      "image_url": "https://i.ibb.co/jGjLW2V/nike.jpg"
+    },
+    {
+      "name": "Zara",
+      "image_url": "https://i.ibb.co/VYqJ8mx/zara.jpg"
+    },
+    {
+      "name": "Puma",
+      "image_url": "https://i.ibb.co/0cBZ22P/puma.jpg"
+    },
+    {
+      "name": "Levi's",
+      "image_url": "https://i.ibb.co/d7CHKnW/levis.jpg"
+    },
+    {
+      "name": "Gucci",
+      "image_url": "https://i.ibb.co/252stfP/gucci.jpg"
+    },
+    {
+      "name": "Dior",
+      "image_url": "https://i.ibb.co/Kz2D0TV/dior.jpg"
+    }
+  ]

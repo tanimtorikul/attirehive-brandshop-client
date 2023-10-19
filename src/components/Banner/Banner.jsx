@@ -24,10 +24,10 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="w-full min-h-[300px] md:min-h-[680px] flex justify-around items-center bg-[#83F0F2] rounded">
+          <div className="w-full min-h-[300px] md:min-h-[640px] flex justify-evenly items-center bg-[#83F0F2] rounded md:px-12">
             <div className="flex-1">
-              <h2 className="md:text-5xl text-3xl font-bold mb-3">
-                Enjoy This Summer Trends
+              <h2 className="md:text-7xl text-3xl font-bold mb-3">
+              Exclusive collection for everyone
               </h2>
               <p className="mb-3">Discover our latest collection</p>
               <button className="bg-black text-white px-4 md:px-8 py-3 rounded">
@@ -43,7 +43,7 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="w-full min-h-[300px] md:min-h-[680px]  flex justify-around items-center bg-blue-300 rounded
+            className="w-full min-h-[300px] md:min-h-[640px]  flex justify-around items-center bg-blue-300 rounded md:px-12
           "
           >
             <div className="flex-1">
@@ -56,7 +56,7 @@ const Banner = () => {
               data-aos-offset="500"
               data-aos-duration="2000"
             >
-              <h2 className="text-3xl md:text-5xl font-bold mb-3">
+              <h2 className="text-3xl md:text-7xl  font-bold mb-3">
                 Enjoy This Summer Trends
               </h2>
               <p className="mb-3">Discover our latest collection</p>
@@ -70,14 +70,14 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="w-full min-h-[300px] md:min-h-[680px]  flex justify-around items-center bg-[#E6E6E6] rounded"
+            className="w-full min-h-[300px] md:min-h-[640px]  flex justify-around items-center bg-[#E6E6E6] rounded md:px-12"
             data-aos="zoom-in-down"
             data-aos-anchor="#example-anchor"
             data-aos-offset="500"
             data-aos-duration="2000"
           >
             <div className="flex-1">
-              <h2 className="text-3xl md:text-5xl font-bold mb-3">
+              <h2 className="text-3xl md:text-7xl font-bold mb-3">
                 Enjoy This Summer Trends
               </h2>
               <p className="mb-3">Discover our latest collection</p>

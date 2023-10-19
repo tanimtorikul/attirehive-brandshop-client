@@ -1,7 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaUser, FaToggleOff, FaMagnifyingGlass } from "react-icons/fa6";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  // console.log(user);
+
   const navLinks = (
     <>
       <li className="text-lg text-white font-medium">
@@ -20,21 +26,25 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li className="text-lg text-white font-medium">
-        <NavLink
-          to="/addproduct"
-          style={({ isActive }) => {
-            return {
-              backgroundColor: isActive ? "white" : "",
-              fontWeight: isActive ? "medium" : "normal",
-              color: isActive ? "green" : "black",
-              textDecoration: isActive ? "underline" : "none",
-            };
-          }}
-        >
-          Add Product
-        </NavLink>
-      </li>
+      {user && (
+        <>
+          <li className="text-lg text-white font-medium">
+            <NavLink
+              to="/addproduct"
+              style={({ isActive }) => {
+                return {
+                  backgroundColor: isActive ? "white" : "",
+                  fontWeight: isActive ? "medium" : "normal",
+                  color: isActive ? "green" : "black",
+                  textDecoration: isActive ? "underline" : "none",
+                };
+              }}
+            >
+              Add Product
+            </NavLink>
+          </li>
+        </>
+      )}
       <li className="text-lg text-white font-medium">
         <NavLink
           to="/cart"
@@ -84,16 +94,44 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
-      <div className="navbar-end flex gap-10">
-        <a href="text-xl">
-          <FaMagnifyingGlass></FaMagnifyingGlass>
-        </a>
-        <Link to='/login' className="text-xl">
-          <FaUser></FaUser>
-        </Link>
-        <a className="text-xl" href="">
-          <FaToggleOff></FaToggleOff>
-        </a>
+      <div className="navbar-end">
+        <div className="flex gap-10 items-center">
+          <a href="text-xl">
+            {" "}
+            <FaMagnifyingGlass></FaMagnifyingGlass>{" "}
+          </a>{" "}
+          <a className="text-xl" href="">
+            {" "}
+            <FaToggleOff></FaToggleOff>{" "}
+          </a>
+        </div>
+        {user?.email ? (
+          <div className="dropdown dropdown-end ml-10">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img src={user.photoURL} />
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content  mt-3  p-2 shadow bg-red-200 z-10 rounded-box w-52"
+            >
+              <li>
+                <a>{user.displayName}</a>
+              </li>
+              <li>
+                <a onClick={logOut}>Logout</a>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <div className="ml-10">
+            <Link to="/login" className="text-xl">
+              {" "}
+              <FaUser></FaUser>{" "}
+            </Link>{" "}
+          </div>
+        )}
       </div>
     </div>
   );

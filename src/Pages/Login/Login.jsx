@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "./SocialLogin";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -15,6 +17,8 @@ const Login = () => {
     signIn(email, password)
       .then((res) => {
         console.log(res.user);
+        e.target.reset;
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error);
@@ -23,12 +27,12 @@ const Login = () => {
   return (
     <>
       <div className="hero px-4 md:px-0 md:my-4">
-        <div className="card w-full md:max-w-xl md:py-6 shadow-2xl">
+        <div className="card w-full md:max-w-xl md:py-4 shadow-2xl">
           <form
             onSubmit={handleLogin}
             className="card-body w-full md:w-[560px] mx-auto"
           >
-            <h2 className="text-4xl text-center font-semibold mb-[50px]">
+            <h2 className="text-4xl text-center font-semibold mb-[12px]">
               Login your account
             </h2>
             <p className="border border-[#E7E7E7] mb-[50px]"></p>

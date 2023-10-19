@@ -31,7 +31,7 @@ const Register = () => {
             onSubmit={handleRegister}
             className="card-body w-full md:w-[560px] mx-auto"
           >
-            <h2 className="text-4xl text-center font-semibold mb-10 md:mb-[50px]">
+            <h2 className="text-4xl text-center font-semibold mb-10 md:mb-[12px]">
               Register for an account
             </h2>
             <p className="border border-[#E7E7E7] mb-[50px]"></p>

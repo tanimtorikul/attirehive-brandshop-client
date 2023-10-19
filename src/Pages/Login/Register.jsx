@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Register = () => {
+  const [registerError, setRegisterError] = useState("");
   const { createUser } = useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
@@ -13,6 +14,20 @@ const Register = () => {
     const password = form.password.value;
 
     console.log(email, password, name);
+    // password validation
+    if (password.length < 6) {
+      setRegisterError("Password should be at least 6 characters or longer");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      setRegisterError("Password should have at least uppercase character");
+      return;
+    } else if (!/[^a-zA-Z0-9]/.test(password)) {
+      setRegisterError("Password should have at least one special character");
+      return;
+    }
+
+    // reset error message
+    setRegisterError("");
 
     createUser(email, password)
       .then((res) => {
@@ -20,6 +35,7 @@ const Register = () => {
       })
       .catch((error) => {
         console.log(error);
+        setRegisterError(error.message);
       });
   };
 
@@ -76,6 +92,9 @@ const Register = () => {
             <div className="form-control mt-6">
               <button className="btn bg-black text-white">Register</button>
             </div>
+            {registerError && (
+              <p className="text-red-600 text-center font-medium">{registerError}</p>
+            )}
           </form>
           <h2 className="text-center text-lg font-medium">
             Already have an account?{" "}

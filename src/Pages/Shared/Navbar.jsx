@@ -2,11 +2,21 @@ import { Link, NavLink } from "react-router-dom";
 import { FaUser, FaToggleOff, FaMagnifyingGlass } from "react-icons/fa6";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   // console.log(user);
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        toast.success("User logged out successfully!");
+      })
+      .catch((error) => {
+        // console.log(error);
+      });
+  };
 
   const navLinks = (
     <>
@@ -120,7 +130,7 @@ const Navbar = () => {
                 <a>{user.displayName}</a>
               </li>
               <li>
-                <a onClick={logOut}>Logout</a>
+                <a onClick={handleLogout}>Logout</a>
               </li>
             </ul>
           </div>

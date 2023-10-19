@@ -11,7 +11,7 @@ const AddProduct = () => {
             onSubmit={handleAddProduct}
             className="card-body container mx-auto"
           >
-            <h2 className="text-4xl text-center font-semibold mb-10 md:mb-[50px]">
+            <h2 className="text-4xl text-center font-semibold mb-10 md:mb-[12px]">
               Add a Product
             </h2>
             <p className="border border-[#E7E7E7] mb-[50px]"></p>
@@ -105,7 +105,7 @@ const AddProduct = () => {
               />
             </div>
             <div className="form-control md:w-1/6 mx-auto mt-6">
-              <button className="btn bg-[#11C0B4] hover:bg-green-600 text-white">
+              <button className="btn bg-black text-white">
                 Add Product
               </button>
             </div>

@@ -1,10 +1,12 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "./SocialLogin";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
-  const { signIn, } = useContext(AuthContext);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [loginError, setLoginError] = useState("");
+  const { signIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const handleLogin = (e) => {
@@ -18,10 +20,12 @@ const Login = () => {
       .then((res) => {
         console.log(res.user);
         e.target.reset;
+        setSuccessMessage("Logged in successfully");
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error);
+        setLoginError("Invalid email or password. Please try again.");
       });
   };
   return (
@@ -81,6 +85,16 @@ const Login = () => {
                 <span className="text-red-600">Register</span>
               </Link>{" "}
             </h2>
+            {loginError && (
+              <p className="text-red-500 font-medium text-center">
+                {loginError}
+              </p>
+            )}
+            {successMessage && (
+              <p className="text-green-500 font-bold text-center">
+                {successMessage}
+              </p>
+            )}
           </form>
           <SocialLogin></SocialLogin>
         </div>

@@ -1,16 +1,23 @@
 import { useContext } from "react";
 import { FaGoogle, FaGithub, FaFacebook } from "react-icons/fa";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { useLocation, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const SocialLogin = () => {
   const { googleSignIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+        toast.success("User logged in successfully");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
+        toast.error(error.message);
       });
   };
   return (

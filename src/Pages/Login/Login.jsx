@@ -4,12 +4,16 @@ import SocialLogin from "./SocialLogin";
 const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
-    
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+
   };
   return (
     <>
       <div className="hero px-4 md:px-0 md:my-4">
-        <div className="card w-full md:max-w-2xl md:py-6 shadow-2xl">
+        <div className="card w-full md:max-w-xl md:py-6 shadow-2xl">
           <form
             onSubmit={handleLogin}
             className="card-body w-full md:w-[560px] mx-auto"

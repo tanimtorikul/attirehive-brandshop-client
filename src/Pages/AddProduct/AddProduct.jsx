@@ -6,7 +6,7 @@ const AddProduct = () => {
   return (
     <>
       <div className="px-4 md:px-0 ">
-        <div className="card container mx-auto shadow-2xl">
+        <div className="max-w-4xl mx-auto shadow-2xl">
           <form
             onSubmit={handleAddProduct}
             className="card-body container mx-auto"

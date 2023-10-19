@@ -4,11 +4,12 @@ import SocialLogin from "./SocialLogin";
 const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
+    
   };
   return (
     <>
-      <div className="hero px-4 md:px-0  my-8">
-        <div className="card w-full md:w-[752px] md:py-6 shadow-2xl bg-base-100">
+      <div className="hero px-4 md:px-0 md:my-4">
+        <div className="card w-full md:max-w-2xl md:py-6 shadow-2xl">
           <form
             onSubmit={handleLogin}
             className="card-body w-full md:w-[560px] mx-auto"
@@ -52,7 +53,7 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-[#11C0B4] hover:bg-green-600 text-white">
+              <button className="btn bg-black hover:bg-green-600 text-white">
                 Login
               </button>
             </div>

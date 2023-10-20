@@ -16,13 +16,13 @@ const Products = () => {
         </h2>
         <div className="border-b-2 w-16 border-gray-800 mx-auto mt-2"></div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-24">
         {products.map((product) => (
           <div
             key={product._id}
-            className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105"
+            className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105 "
           >
-            <div className="relative h-[350px] overflow-hidden rounded-lg">
+            <div className="relative md:h-[350px] overflow-hidden rounded-lg">
               <img
                 src={product.image}
                 alt={product.name}

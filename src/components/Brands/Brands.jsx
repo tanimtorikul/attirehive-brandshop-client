@@ -20,7 +20,7 @@ const Brands = () => {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-screen-2xl mx-auto mt-8 px-4 md:px-0">
         {brands.map((brand, index) => (
-          <Link to={`/brands/${brand.id}`} key={index}>
+          <Link to={`/product/${brand.name}`} key={index}>
             <div className="bg-white p-4 rounded-lg shadow-md text-center transition-transform transform hover:scale-110 hover:shadow-lg hover:bg-gray-100 hover:border border-transparent hover:border-gray-500">
               <img
                 src={brand.image_url}

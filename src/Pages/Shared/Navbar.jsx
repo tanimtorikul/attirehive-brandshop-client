@@ -99,22 +99,23 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <a className="text-[#292929] text-xl font-medium">AttireVibe</a>
+        <a className="text-3xl font-medium">AttireVibe</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
         <div className="flex gap-10 items-center">
-          <a href="text-xl">
+          <a href="text-xl" className="text-2xl">
             {" "}
-            <FaMagnifyingGlass></FaMagnifyingGlass>{" "}
-          </a>{" "}
-          <a className="text-xl" href="">
-            {" "}
-            <FaToggleOff></FaToggleOff>{" "}
+            {/* Increase the font size with text-2xl */}
+            <FaMagnifyingGlass></FaMagnifyingGlass>
+          </a>
+          <a className="text-2xl" href="">
+            <FaToggleOff></FaToggleOff>
           </a>
         </div>
+
         {user?.email ? (
           <div className="dropdown dropdown-end ml-10">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

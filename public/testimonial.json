@@ -1,0 +1,35 @@
+[
+    {
+      "image": "https://i.ibb.co/S58dMgZ/ian-dooley-d1-UPki-Fd04-A-unsplash.jpg",
+      "name": "Emily Johnson",
+      "location": "New York, NY",
+      "email": "emily.johnson@example.com",
+      "rating": 5,
+      "comment": "I love shopping on this website! The selection of clothing is fantastic, and the prices are unbeatable. The quality of the products is top-notch, and the delivery is always on time. Highly recommended!"
+    },
+    {
+      "image": "https://i.ibb.co/fqLTQQx/michael-dam-m-EZ3-Po-FGs-k-unsplash.jpg",
+      "name": "David Smith",
+      "location": "Los Angeles, CA",
+      "email": "david.smith@example.com",
+      "rating": 4,
+      "comment": "I've been a loyal customer of this e-commerce site for a while now. They offer a great variety of trendy clothes, and their customer service is excellent. The only reason I didn't give it five stars is that I'd like to see more deals and discounts."
+    },
+    {
+      "image": "https://i.ibb.co/G555dGH/vince-fleming-j3lf-Jn6deo-unsplash.jpg",
+      "name": "Sophia Martinez",
+      "location": "Miami, FL",
+      "email": "sophia.martinez@example.com",
+      "rating": 5,
+      "comment": "This website has made shopping for clothes so convenient. The user interface is user-friendly, and the filters help me find exactly what I'm looking for. The clothes are stylish, and the shipping is fast. I couldn't be happier!"
+    },
+    {
+      "image": "https://i.ibb.co/9rf3GVg/alexander-hipp-i-EEBWg-Y-6l-A-unsplash.jpg",
+      "name": "Michael Davis",
+      "location": "Chicago, IL",
+      "email": "michael.davis@example.com",
+      "rating": 4,
+      "comment": "I've had a positive experience with this e-commerce site. The apparel is of good quality, and the return process is hassle-free. My only suggestion is to expand the plus-size options to cater to a broader range of customers."
+    }
+  ]
+  

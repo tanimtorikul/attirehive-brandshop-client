@@ -3,12 +3,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import "./Banner.css";
 
 import { FaArrowRightLong } from "react-icons/fa6";
 const Banner = () => {
   return (
-    <div className="swiper-container md:px-12 p-4">
+    <div className="swiper-container md:px-12 p-4 border-4 border-black md:h-[800px]">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -24,10 +23,10 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="w-full min-h-[300px] md:min-h-[640px] flex justify-evenly items-center bg-[#83F0F2] rounded md:px-12">
+          <div className="w-full  flex justify-evenly items-center bg-[#83F0F2] rounded md:px-12">
             <div className="flex-1">
               <h2 className="md:text-7xl text-3xl font-bold mb-3">
-              Exclusive collection for everyone
+                Exclusive collection for everyone
               </h2>
               <p className="mb-3">Discover our latest collection</p>
               <button className="bg-black text-white px-4 md:px-8 py-3 rounded">
@@ -43,7 +42,7 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="w-full min-h-[300px] md:min-h-[640px]  flex justify-around items-center bg-blue-300 rounded md:px-12
+            className="w-full   flex justify-around items-center bg-blue-300 rounded md:px-12
           "
           >
             <div className="flex-1">
@@ -70,7 +69,7 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="w-full min-h-[300px] md:min-h-[640px]  flex justify-around items-center bg-[#E6E6E6] rounded md:px-12"
+            className="w-full  flex justify-around items-center bg-[#E6E6E6] rounded md:px-12"
             data-aos="zoom-in-down"
             data-aos-anchor="#example-anchor"
             data-aos-offset="500"

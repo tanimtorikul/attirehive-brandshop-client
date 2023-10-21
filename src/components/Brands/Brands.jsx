@@ -11,7 +11,7 @@ const Brands = () => {
   }, []);
 
   return (
-    <div className="py-8 md:py-16 lg:py-32">
+    <div className="py-8 md:py-16 border-4 border-red-400">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
           Top Brands

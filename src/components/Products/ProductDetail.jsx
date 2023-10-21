@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import toast from "react-hot-toast";
 
 const ProductDetail = () => {
   const loadedProduct = useLoaderData();
@@ -35,6 +36,16 @@ const ProductDetail = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if (data.insertedId) {
+          toast.success("Item added to the cart successfully!", {
+            style: {
+              background: "#0074E4",
+              color: "white",
+              border: "none",
+            },
+          });
+        }
+      
       });
   };
 

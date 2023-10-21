@@ -40,7 +40,7 @@ const Brand = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className="md:w-1/2 mx-auto min-h-[500px]  flex justify-evenly items-center bg-red-300 rounded md:px-12">
+            <div className="md:w-1/2 mx-auto min-h-[300px]  flex justify-evenly items-center bg-red-300 rounded md:px-12">
               <div className="flex-1">
                 <h2 className="md:text-7xl text-3xl font-bold mb-3 text-center">
                   Amazing Deals Await You!
@@ -82,7 +82,7 @@ const Brand = () => {
         </Swiper>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl mx-auto">
         {loading ? (
           <span className="loading loading-dots loading-lg"></span>
         ) : products.length === 0 ? (
@@ -91,12 +91,10 @@ const Brand = () => {
           </p>
         ) : (
           products.map((product) => (
-            
             <div
               key={product._id}
               className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105 "
             >
-              
               <div className="relative flex justify-center overflow-hidden rounded-lg">
                 <img src={product.image} className="object-cover w-1/2 h-1/2" />
               </div>
@@ -114,9 +112,11 @@ const Brand = () => {
                     Details
                   </button>
                 </Link>
-                <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none">
+               <Link to={`/updateProduct/${product._id}`}>
+               <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none">
                   Update
                 </button>
+               </Link>
               </div>
             </div>
           ))

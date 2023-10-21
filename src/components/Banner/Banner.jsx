@@ -7,7 +7,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { FaArrowRightLong } from "react-icons/fa6";
 const Banner = () => {
   return (
-    <div className="swiper-container md:px-12 p-4 border-4 border-black md:h-[800px]">
+    <div className="swiper-container md:px-12 p-4  md:h-[800px]">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

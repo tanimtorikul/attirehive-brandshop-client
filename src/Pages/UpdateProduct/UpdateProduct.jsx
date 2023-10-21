@@ -27,7 +27,6 @@ const UpdateProduct = () => {
     };
 
     console.log(updatedProduct);
-    form.reset();
 
     // sending data to server
     fetch(`http://localhost:5000/product/${_id}`, {
@@ -40,7 +39,7 @@ const UpdateProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.insertedId) {
+        if (data.modifiedCount > 0) {
           toast.success("Product Updated successfully!", {
             style: {
               background: "#0074E4",

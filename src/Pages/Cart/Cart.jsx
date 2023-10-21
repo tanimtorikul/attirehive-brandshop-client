@@ -29,6 +29,9 @@ const Cart = () => {
           .then((data) => {
             console.log(data);
             if (data.deletedCount > 0) {
+                setCartItems((cartItems) =>
+              cartItems.filter((item) => item._id !== _id)
+            );
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
             }
           });

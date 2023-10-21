@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import toast from "react-hot-toast";
@@ -10,11 +10,11 @@ const ProductDetail = () => {
     loadedProduct;
 
   const { user } = useContext(AuthContext);
-  const { displayName } = user;
+  const { uid } = user;
 
   const handleAddtoCart = () => {
     const cartItem = {
-      displayName,
+      user: uid, 
       brand,
       image,
       name,

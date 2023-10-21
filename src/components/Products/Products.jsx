@@ -24,11 +24,11 @@ const Products = () => {
             key={product._id}
             className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105 flex flex-col"
           >
-            <div className="relative h-64 overflow-hidden rounded-t-lg">
+            <div className="relative h-72 md:h-64 overflow-hidden rounded-t-lg">
               <img
                 src={product.image}
                 alt={product.name}
-                className="object-cover w-full h-full"
+                className="object-contain md:object-cover w-full h-5/6"
               />
             </div>
             <div className="p-4 flex flex-col flex-grow">

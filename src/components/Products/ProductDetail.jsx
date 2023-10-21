@@ -14,7 +14,7 @@ const ProductDetail = () => {
 
   const handleAddtoCart = () => {
     const cartItem = {
-      user: uid,
+       uid,
       brand,
       image,
       name,

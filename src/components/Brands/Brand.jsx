@@ -42,17 +42,10 @@ const Brand = () => {
           <SwiperSlide>
             <div className="md:w-1/2 mx-auto min-h-[300px]  flex justify-evenly items-center bg-red-300 rounded md:px-12">
               <div className="flex-1">
-                <h2 className="md:text-7xl text-3xl font-bold mb-3 text-center">
-                  Amazing Deals Await You!
+                <h2 className="md:text-6xl text-3xl font-bold mb-3 text-center">
+                  Upto 40% off on Shirts, Jeans and More
                 </h2>
-                <p className="mb-3 text-center">
-                  Explore our latest discounts and offers.
-                </p>
-                <button className="bg-black text-white px-4 md:px-8 py-3 rounded">
-                  <div className="flex items-center gap-4">
-                    Shop Now <FaArrowRightLong></FaArrowRightLong>
-                  </div>
-                </button>
+            
               </div>
               <div className="flex-1">
                 <img src="/slider1.png" alt="" className="backdrop-blur-md" />

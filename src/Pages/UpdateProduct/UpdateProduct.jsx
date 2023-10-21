@@ -29,7 +29,7 @@ const UpdateProduct = () => {
     console.log(updatedProduct);
 
     // sending data to server
-    fetch(`http://localhost:5000/product/${_id}`, {
+    fetch(`https://attire-hive-server.vercel.app/product/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

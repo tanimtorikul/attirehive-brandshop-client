@@ -5,7 +5,7 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/cart")
+    fetch("https://attire-hive-server.vercel.app/cart")
       .then((res) => res.json())
       .then((data) => setCartItems(data));
   }, []);
@@ -22,16 +22,16 @@ const Cart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/cart/${_id}`, {
+        fetch(`https://attire-hive-server.vercel.app/cart/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
             if (data.deletedCount > 0) {
-                setCartItems((cartItems) =>
-              cartItems.filter((item) => item._id !== _id)
-            );
+              setCartItems((cartItems) =>
+                cartItems.filter((item) => item._id !== _id)
+              );
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
             }
           });

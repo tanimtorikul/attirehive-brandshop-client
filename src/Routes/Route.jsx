@@ -44,7 +44,7 @@ const router = createBrowserRouter([
             <Brand></Brand>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/product"),
+        loader: () => fetch("https://attire-hive-server.vercel.app/product"),
       },
       {
         path: "/productdetail/:productId",
@@ -54,22 +54,30 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.productId}`),
+          fetch(
+            `https://attire-hive-server.vercel.app/product/${params.productId}`
+          ),
       },
       {
-        path: '/updateProduct/:productId',
-        element: <PrivateRoute>
-          <UpdateProduct></UpdateProduct>
-        </PrivateRoute>,
+        path: "/updateProduct/:productId",
+        element: (
+          <PrivateRoute>
+            <UpdateProduct></UpdateProduct>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.productId}`),
+          fetch(
+            `https://attire-hive-server.vercel.app/product/${params.productId}`
+          ),
       },
       {
-       path :"/cart",
-       element: <PrivateRoute>
-        <Cart></Cart>
-       </PrivateRoute>
-      }
+        path: "/cart",
+        element: (
+          <PrivateRoute>
+            <Cart></Cart>
+          </PrivateRoute>
+        ),
+      },
     ],
   },
 ]);

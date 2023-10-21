@@ -13,7 +13,7 @@ const Brand = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/product")
+    fetch("https://attire-hive-server.vercel.app/product")
       .then((res) => res.json())
       .then((data) => {
         const brandProducts = data.filter((product) => product.brand === brand);
@@ -112,11 +112,11 @@ const Brand = () => {
                     Details
                   </button>
                 </Link>
-               <Link to={`/updateProduct/${product._id}`}>
-               <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none">
-                  Update
-                </button>
-               </Link>
+                <Link to={`/updateProduct/${product._id}`}>
+                  <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none">
+                    Update
+                  </button>
+                </Link>
               </div>
             </div>
           ))

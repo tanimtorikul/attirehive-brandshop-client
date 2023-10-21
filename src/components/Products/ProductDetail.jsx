@@ -14,7 +14,7 @@ const ProductDetail = () => {
 
   const handleAddtoCart = () => {
     const cartItem = {
-      user: uid, 
+      user: uid,
       brand,
       image,
       name,
@@ -26,7 +26,7 @@ const ProductDetail = () => {
     console.log(cartItem);
 
     // sending data to server
-    fetch("http://localhost:5000/cartItem", {
+    fetch("https://attire-hive-server.vercel.app/cartItem", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -45,7 +45,6 @@ const ProductDetail = () => {
             },
           });
         }
-      
       });
   };
 

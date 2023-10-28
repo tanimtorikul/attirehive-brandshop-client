@@ -11,7 +11,7 @@ const Navbar = () => {
   );
   useEffect(() => {
     localStorage.setItem("theme", theme);
-    const localTheme = localStorage.getItem("theme");
+    const localTheme = localStorage.getItem("theme") 
     document.querySelector("html").setAttribute("data-theme", localTheme);
   }, [theme]);
 
@@ -42,7 +42,7 @@ const Navbar = () => {
             return {
               backgroundColor: isActive ? "white" : "",
               fontWeight: isActive ? "bold" : "normal",
-              color: isActive ? "green" : "black",
+              color: isActive ? "green" : "red",
               textDecoration: isActive ? "underline" : "none",
               paddingBottom: isActive ? "1px " : "none",
             };
@@ -109,7 +109,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 p-2 shadow z-20 bg-base-100 rounded-box w-52"
           >
             {navLinks}
           </ul>

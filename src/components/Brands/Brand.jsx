@@ -45,7 +45,6 @@ const Brand = () => {
                 <h2 className="md:text-6xl text-3xl font-bold mb-3 text-center">
                   Upto 40% off on Shirts, Jeans and More
                 </h2>
-            
               </div>
               <div className="flex-1">
                 <img src="/slider1.png" alt="" className="backdrop-blur-md" />
@@ -85,33 +84,75 @@ const Brand = () => {
         ) : (
           products.map((product) => (
             <div
-              key={product._id}
-              className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105 "
+            key={product._id}
+            className="relative mx-auto flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md"
+          >
+            <a
+              className="relative mx-3 mt-3 flex justify-center h-60 overflow-hidden rounded-xl"
+              href="#"
             >
-              <div className="relative flex justify-center overflow-hidden rounded-lg">
-                <img src={product.image} className="object-cover w-1/2 h-1/2" />
+              <img className="object-cover" src={product.image} />
+            </a>
+            <div className="mt-4 px-5 pb-5">
+              <a href="#">
+                <h5 className="text-xl tracking-tight text-slate-900">
+                  {product.name}
+                </h5>
+              </a>
+              <div className="mt-2 mb-5 flex items-center justify-between">
+                <p>
+                  <span className="text-3xl font-bold text-slate-900">
+                    ${product.price}
+                  </span>
+                </p>
+                <div className="flex items-center">
+                  <span className="mr-2 ml-3 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">
+                    {product.rating}
+                  </span>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mt-3">{product.name}</h3>
-              <p className="text-gray-500 font-medium mt-1">${product.price}</p>
-              <div className="flex items-center mt-2">
-                <p className="text-gray-600 mr-2">Rating:</p>
-                <span className="text-yellow-500">
-                  {product.rating} <i className="fas fa-star"></i>
-                </span>
-              </div>
-              <div className="mt-4 flex justify-between">
-                <Link to={`/productdetail/${product._id}`}>
-                  <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none">
-                    Details
-                  </button>
-                </Link>
-                <Link to={`/updateProduct/${product._id}`}>
-                  <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none">
-                    Update
-                  </button>
-                </Link>
-              </div>
+             <div className="flex justify-between">
+             <Link
+                to={`/productdetail/${product._id}`}
+                href="#"
+                className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="mr-2 h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="16" x2="12" y2="12" />
+                  <line x1="12" y1="8" x2="12" y2="8" />
+                </svg>
+                Details
+              </Link>
+             <Link
+                to={`/updateProduct/${product._id}`}
+                href="#"
+                className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="mr-2 h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="16" x2="12" y2="12" />
+                  <line x1="12" y1="8" x2="12" y2="8" />
+                </svg>
+                Update
+              </Link>
+             </div>
             </div>
+          </div>
           ))
         )}
       </div>

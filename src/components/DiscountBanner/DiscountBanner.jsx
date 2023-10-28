@@ -1,14 +1,13 @@
-import React from 'react';
-
 const DiscountBanner = () => {
   return (
     <div
-      className="hero max-w-7xl mx-auto min-h-screen my-24 relative"
+      className="hero md:max-w-7xl mx-auto md:min-h-[600px] my-12 md:my-24 relative"
       style={{
         backgroundImage: "url(bgimage.jpg)",
+        // paddingInline:"20px"
       }}
     >
-      <div className="hero-overlay bg-opacity-60"></div>
+      <div className="hero-overlay bg-opacity-80"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
           <h1 className="mb-5 text-6xl font-bold custom-color tracking-wider">
@@ -28,9 +27,6 @@ const DiscountBanner = () => {
               Subscribe
             </button>
           </div>
-          <button className="btn custom-color transform transition-transform hover:scale-105">
-            Get Started
-          </button>
         </div>
       </div>
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-10">

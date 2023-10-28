@@ -11,12 +11,12 @@ const Brands = () => {
   }, []);
 
   return (
-    <div className="py-8 md:py-16">
+    <div className="py-8 ">
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-400">
           Top Brands
         </h2>
-        <div className="border-b-2 w-16 border-gray-800 mx-auto mt-2"></div>
+        <div className="border-b-2 w-16 border-gray-400 mx-auto mt-2"></div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-screen-2xl mx-auto mt-8 px-4 md:px-0">
         {brands.map((brand, index) => (

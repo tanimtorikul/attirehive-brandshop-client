@@ -10,6 +10,7 @@ const Cart = () => {
       .then((data) => setCartItems(data));
   }, []);
 
+  console.log(cartItems);
   const handleDelete = (_id) => {
     console.log(_id);
     Swal.fire({

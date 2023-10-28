@@ -50,36 +50,36 @@ const ProductDetail = () => {
 
   return (
     <section className="overflow-hidden bg-white py-11">
-      <div className="max-w-4xl px-4 py-4 mx-auto lg:py-8 md:px-6">
+      <div className="max-w-4xl px-4 mx-auto lg:py-8 md:px-6">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4 md:w-1/2 ">
             <div className="sticky top-0 z-50 overflow-hidden ">
-              <div className="relative mb-6 lg:mb-10 lg:h-2/4 ">
+              <div className="relative mb-6 lg:mb-10 lg:h-2/4 flex justify-center ">
                 <img
                   src={image}
                   alt=""
-                  className="object-cover w-full lg:h-full "
+                  className="object-cover w-9/12 md:w-full lg:h-full "
                 />
               </div>
               <div className="flex justify-center items-center ">
                 <div className="w-1/2 p-2 sm:w-1/4">
                   <a
                     href="#"
-                    className="block border border-blue-300 border-transparent hover:border-blue-300 "
+                    className="block hover:border-blue-300 "
                   >
                     <img
                       src={image}
                       alt=""
-                      className="object-cover w-1/2 lg:h-20 "
+                      className="object-cover w-1/2 lg:h-16"
                     />
                   </a>
                 </div>
                 <div className="w-1/2 p-2 sm:w-1/4">
-                  <a href="#" className="block border b hover:border-blue-300">
+                  <a href="#" className="block hover:border-blue-300">
                     <img
                       src={image}
                       alt=""
-                      className="object-cover w-1/2 lg:h-20"
+                      className="object-cover w-1/2 lg:h-16"
                     />
                   </a>
                 </div>
